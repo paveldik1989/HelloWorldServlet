@@ -12,4 +12,10 @@ public class HelloWorldServlet extends HttpServlet {
         response.getOutputStream().flush();
         response.getOutputStream().close();
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.getOutputStream().write("Post from HelloWorldServlet".getBytes(StandardCharsets.UTF_8));
+        response.getOutputStream().flush();
+        response.getOutputStream().close();
+    }
 }
